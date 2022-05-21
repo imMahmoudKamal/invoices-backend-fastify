@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@fastify/cors": "^7.0.0",
+    "@fastify/sensible": "^4.0.0",
     "concurrently": "^7.0.0",
     "fastify": "^3.0.0",
     "fastify-autoload": "^3.3.1",
