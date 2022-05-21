@@ -3,6 +3,7 @@
 import path from 'path';
 import AutoLoad from 'fastify-autoload';
 import mongoose from 'mongoose';
+import cors from '@fastify/cors';
 import { dbConnect } from './config/db.js';
 
 export default async function (fastify, opts) {
@@ -27,8 +28,8 @@ export default async function (fastify, opts) {
   });
 
   // enable cors
-  // fastify.register(require('@fastify/cors'), {
-  //   origin: true,
-  //   methods: ['GET', 'PATCH', 'OPTIONS', 'POST', 'DELETE'],
-  // });
+  fastify.register(cors, {
+    origin: true,
+    methods: ['GET', 'PATCH', 'OPTIONS', 'POST', 'DELETE'],
+  });
 }
